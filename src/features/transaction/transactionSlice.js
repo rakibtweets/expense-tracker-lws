@@ -8,7 +8,7 @@ import {
 
 const initialState = {
   transactions: [],
-  isloading: false,
+  isLoading: false,
   isError: false,
   error: ''
 };
@@ -52,40 +52,40 @@ const transactionSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchTransactions.pending, (state, action) => {
-        state.isloading = true;
+        state.isLoading = true;
         state.isError = false;
       })
       .addCase(fetchTransactions.fulfilled, (state, action) => {
-        state.isloading = false;
+        state.isLoading = false;
         state.isError = false;
         state.transactions = action.payload;
       })
       .addCase(fetchTransactions.rejected, (state, action) => {
-        state.isloading = false;
+        state.isLoading = false;
         state.isError = true;
         state.error = action?.error?.message;
         state.transactions = [];
       })
       .addCase(createTransaction.pending, (state, action) => {
-        state.isloading = true;
+        state.isLoading = true;
         state.isError = false;
       })
       .addCase(createTransaction.fulfilled, (state, action) => {
-        state.isloading = false;
+        state.isLoading = false;
         state.isError = false;
         state.transactions.push(action.payload);
       })
       .addCase(createTransaction.rejected, (state, action) => {
-        state.isloading = false;
+        state.isLoading = false;
         state.isError = true;
         state.error = action?.error?.message;
       })
       .addCase(changeTransaction.pending, (state, action) => {
-        state.isloading = true;
+        state.isLoading = true;
         state.isError = false;
       })
       .addCase(changeTransaction.fulfilled, (state, action) => {
-        state.isloading = false;
+        state.isLoading = false;
         state.isError = false;
 
         const indexToUpdate = state.transactions.findIndex(
@@ -94,24 +94,24 @@ const transactionSlice = createSlice({
         state.transactions[indexToUpdate] = action.payload;
       })
       .addCase(changeTransaction.rejected, (state, action) => {
-        state.isloading = false;
+        state.isLoading = false;
         state.isError = true;
         state.error = action?.error?.message;
         state.transactions = [];
       })
       .addCase(removeTransaction.pending, (state, action) => {
-        state.isloading = true;
+        state.isLoading = true;
         state.isError = false;
       })
       .addCase(removeTransaction.fulfilled, (state, action) => {
-        state.isloading = false;
+        state.isLoading = false;
         state.isError = false;
         state.transactions = state.transactions.filter(
           (t) => t.id !== action.payload
         );
       })
       .addCase(removeTransaction.rejected, (state, action) => {
-        state.isloading = false;
+        state.isLoading = false;
         state.isError = true;
         state.error = action?.error?.message;
         state.transactions = [];

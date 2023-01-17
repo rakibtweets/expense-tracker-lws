@@ -20,6 +20,9 @@ const Form = () => {
         amount: Number(amount)
       })
     );
+    setName('');
+    setAmount('');
+    setType('');
   };
   return (
     <div className="form">
