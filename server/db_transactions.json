@@ -11,6 +11,13 @@
       "name": "Family Expenses",
       "type": "expense",
       "amount": 200000
+    },
+
+    {
+      "name": "Elon Mask",
+      "type": "expense",
+      "amount": 1234,
+      "id": 3
     }
   ]
 }

@@ -23,14 +23,14 @@ export const fetchTransactions = createAsyncThunk(
 );
 
 export const createTransaction = createAsyncThunk(
-  'transactions/changeTransaction',
+  'transactions/createTransaction',
   async (data) => {
     const transaction = await addTransaction(data);
     return transaction;
   }
 );
 
-export const changeTransactions = createAsyncThunk(
+export const changeTransaction = createAsyncThunk(
   'transactions/editTransactions',
   async ({ id, data }) => {
     const transaction = await editTransaction(id, data);
@@ -80,11 +80,11 @@ const transactionSlice = createSlice({
         state.isError = true;
         state.error = action?.error?.message;
       })
-      .addCase(changeTransactions.pending, (state, action) => {
+      .addCase(changeTransaction.pending, (state, action) => {
         state.isloading = true;
         state.isError = false;
       })
-      .addCase(changeTransactions.fulfilled, (state, action) => {
+      .addCase(changeTransaction.fulfilled, (state, action) => {
         state.isloading = false;
         state.isError = false;
 
@@ -93,7 +93,7 @@ const transactionSlice = createSlice({
         );
         state.transactions[indexToUpdate] = action.payload;
       })
-      .addCase(changeTransactions.rejected, (state, action) => {
+      .addCase(changeTransaction.rejected, (state, action) => {
         state.isloading = false;
         state.isError = true;
         state.error = action?.error?.message;
