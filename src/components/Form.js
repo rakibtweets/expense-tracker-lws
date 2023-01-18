@@ -63,10 +63,12 @@ const Form = () => {
         }
       })
     );
+    setEditMode(false);
     reset();
   };
 
   const cancelEditMode = () => {
+    reset();
     setEditMode(false);
   };
 

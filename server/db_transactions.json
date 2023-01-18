@@ -15,7 +15,7 @@
     {
       "name": "Elon Mask",
       "amount": 500039,
-      "type": "expense",
+      "type": "income",
       "id": 3
     },
     {
@@ -26,8 +26,8 @@
     },
     {
       "name": "test1",
-      "type": "expense",
       "amount": 500,
+      "type": "income",
       "id": 5
     },
     {
@@ -35,6 +35,12 @@
       "type": "expense",
       "amount": 1222,
       "id": 6
+    },
+    {
+      "name": "arabia",
+      "type": "income",
+      "amount": 12345,
+      "id": 7
     }
   ]
 }
