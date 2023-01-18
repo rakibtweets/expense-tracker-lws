@@ -1,24 +1,6 @@
 {
   "transactions": [
     {
-      "name": "my salary",
-      "amount": 12000,
-      "type": "income",
-      "id": 1
-    },
-    {
-      "name": "rakib's salary",
-      "type": "expense",
-      "amount": 1000,
-      "id": 2
-    },
-    {
-      "name": "Elon Mask",
-      "amount": 500039,
-      "type": "income",
-      "id": 3
-    },
-    {
       "name": "girs income",
       "amount": 598,
       "type": "expense",
@@ -29,18 +11,6 @@
       "amount": 500,
       "type": "income",
       "id": 5
-    },
-    {
-      "name": "test2",
-      "type": "expense",
-      "amount": 1222,
-      "id": 6
-    },
-    {
-      "name": "arabia",
-      "type": "income",
-      "amount": 12345,
-      "id": 7
     }
   ]
 }

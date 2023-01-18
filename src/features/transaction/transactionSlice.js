@@ -41,7 +41,7 @@ export const changeTransaction = createAsyncThunk(
 
 export const removeTransaction = createAsyncThunk(
   'transactions/removeTransaction',
-  async ({ id, data }) => {
+  async (id) => {
     const transaction = await deleteTransaction(id);
     return transaction;
   }
@@ -116,7 +116,7 @@ const transactionSlice = createSlice({
         state.isLoading = false;
         state.isError = false;
         state.transactions = state.transactions.filter(
-          (t) => t.id !== action.payload
+          (t) => t.id !== action.meta.arg
         );
       })
       .addCase(removeTransaction.rejected, (state, action) => {
