@@ -2,8 +2,8 @@
   "transactions": [
     {
       "name": "my salary",
-      "type": "income",
       "amount": 12000,
+      "type": "income",
       "id": 1
     },
     {
@@ -14,15 +14,27 @@
     },
     {
       "name": "Elon Mask",
-      "type": "income",
-      "amount": 10000000000000,
+      "amount": 500039,
+      "type": "expense",
       "id": 3
     },
     {
-      "name": "Farisa Tajrin",
+      "name": "girs income",
+      "amount": 598,
       "type": "expense",
-      "amount": 49998,
       "id": 4
+    },
+    {
+      "name": "test1",
+      "type": "expense",
+      "amount": 500,
+      "id": 5
+    },
+    {
+      "name": "test2",
+      "type": "expense",
+      "amount": 1222,
+      "id": 6
     }
   ]
 }
