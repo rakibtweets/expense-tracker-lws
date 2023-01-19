@@ -5,11 +5,13 @@ export const getTransactions = async () => {
   return data;
 };
 
+// add transaction to database
 export const addTransaction = async (data) => {
   const response = await axios.post('/transactions', data);
   return response.data;
 };
 
+// edit single transaction
 export const editTransaction = async (id, data) => {
   const response = await axios.put(`/transactions/${id}`, data);
   return response.data;

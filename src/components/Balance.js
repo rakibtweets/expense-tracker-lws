@@ -26,7 +26,7 @@ const Balance = () => {
         {transactions?.length > 0 ? (
           <span>{numberWithCommas(calculateIncome(transactions))}</span>
         ) : (
-          0
+          <span>0</span>
         )}
       </h3>
     </div>
